@@ -1,0 +1,67 @@
+import java.text.SimpleDateFormat
+
+plugins {
+    id 'application'
+    id 'java'
+}
+
+group 'fr.cleymax'
+version '1.0.0'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+compileJava.options.encoding = 'UTF-8'
+javadoc.options.encoding = 'UTF-8'
+
+mainClassName = 'fr.cleymax.myrobot.MyroBot'
+
+repositories {
+    jcenter()
+    mavenCentral()
+    maven { url "https://oss.jfrog.org/artifactory/libs-release" }
+}
+
+dependencies {
+    compile ("net.dv8tion:JDA:4.0.0_39"){
+        exclude module: 'opus-java'
+    }
+    compile 'org.slf4j:slf4j-simple:1.7.5'
+    compile 'org.apache.httpcomponents:httpclient:4.4'
+    compile 'com.google.code.gson:gson:2.3'
+    compile group: 'org.jsoup', name: 'jsoup', version: '1.12.1'
+    compile 'com.google.guava:guava:21.0'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'
+    compile 'com.electronwill.night-config:json:3.6.0'
+}
+
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+task javadocJar(type: Jar) {
+    archiveClassifier = 'javadoc'
+    from javadoc
+}
+
+task sourcesJar(type: Jar) {
+    archiveClassifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+artifacts { archives javadocJar, sourcesJar }
+
+jar {
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    manifest {
+        attributes(
+                'Main-Class': 'fr.cleymax.myrobot.MyroBot',
+                'Built-By': System.properties['user.name'],
+                'Build-Timestamp': new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ").format(new Date()),
+                'Created-By': "Gradle ${gradle.gradleVersion}",
+                'Build-Jdk': "${System.properties['java.version']} (${System.properties['java.vendor']} ${System.properties['java.vm.version']})",
+                'Build-OS': "${System.properties['os.name']} ${System.properties['os.arch']} ${System.properties['os.version']}"
+        )
+    }
+}
