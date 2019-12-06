@@ -19,7 +19,6 @@
 <div align="center">
 
   [![Stars](https://img.shields.io/github/stars/Cleymax/MyroBot?style=social)]() 
-  
   [![Watchs](https://img.shields.io/github/watchers/Cleymax/MyroBot?style=social)]()
     
 </div>
