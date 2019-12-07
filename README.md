@@ -17,6 +17,7 @@
 
   [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=Cleymax_MyroBot&metric=ncloc)](https://sonarcloud.io/dashboard?id=Cleymax_MyroBot)
   [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=Cleymax_MyroBot&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=Cleymax_MyroBot)
+  [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=Cleymax_MyroBot&metric=security_rating)](https://sonarcloud.io/dashboard?id=Cleymax_MyroBot)
   
 </div>
 <br>
