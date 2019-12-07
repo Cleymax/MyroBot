@@ -1,0 +1,18 @@
+{
+  "discord": {
+    "bot_token": "",
+    "game": {
+      "name": "rien",
+      "type": "DEFAULT"
+    }
+  },
+  "hypixel": {
+    "api_key": ""
+  },
+  "channel": {
+    "public": [
+    ],
+    "private": [
+    ]
+  }
+}
