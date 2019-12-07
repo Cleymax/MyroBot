@@ -125,8 +125,6 @@ public enum PetType {
     CREEPER_POWERED("Powered Creeper", Rarity.LEGENDARY),
     ENDERMITE("Endermite", Rarity.LEGENDARY);
 
-    public static final PetType[] VALUES = values();
-
     private final String name;
     private final Rarity rarity;
 

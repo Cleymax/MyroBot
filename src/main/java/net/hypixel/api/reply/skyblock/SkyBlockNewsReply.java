@@ -2,7 +2,6 @@ package net.hypixel.api.reply.skyblock;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
 import net.hypixel.api.reply.AbstractReply;
 
 public class SkyBlockNewsReply extends AbstractReply {
