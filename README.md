@@ -13,6 +13,11 @@
   [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/Cleymax/MyroBot?style=flat-square)](https://github.com/Cleymax/MyroBot/pulls) 
   [![License](https://img.shields.io/github/license/Cleymax/MyroBot?style=flat-square)](/LICENSE) 
 
+  <br>
+
+  [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=Cleymax_MyroBot&metric=ncloc)](https://sonarcloud.io/dashboard?id=Cleymax_MyroBot)
+  [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=Cleymax_MyroBot&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=Cleymax_MyroBot)
+  
 </div>
 <br>
 

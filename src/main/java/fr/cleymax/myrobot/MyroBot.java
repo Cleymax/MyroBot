@@ -85,11 +85,6 @@ public class MyroBot {
 		new TerminatBot(this).start();
 	}
 
-	/**
-	 * Main method
-	 *
-	 * @param args -  Argument of programs
-	 */
 	public static void main(String[] args)
 	{
 		try
