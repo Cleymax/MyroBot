@@ -33,6 +33,9 @@
 
 <p align="center"> 
     <br> 🐟 Bot Discord for the Myrolame community
+    
+   [![Build](https://github.com/Cleymax/MyroBot/workflows/Java%20CI/badge.svg)]()
+   
 </p>
 
 ## 📝 Table of Contents
