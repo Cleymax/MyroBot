@@ -1,10 +1,11 @@
 package fr.cleymax.myrobot.api;
 
-import com.electronwill.nightconfig.core.file.CommentedFileConfig;
 import com.electronwill.nightconfig.core.file.FileConfig;
 import fr.cleymax.myrobot.MyroBot;
 
 import java.io.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * File <b>Config</b> located on fr.cleymax.myrobot.api Config is a part of MyroBot.
@@ -17,47 +18,54 @@ import java.io.*;
 
 public final class Config {
 
-	private FileConfig settings;
+	private       FileConfig settings;
 
 	public Config()
 	{
 		File file = new File("./settings.json");
+		Logger logger = Logger.getLogger(getClass().getSimpleName());
 		if (!file.exists())
 		{
 			try
 			{
-				file.createNewFile();
+				if (file.createNewFile())
+				{
+					logger.info("Configuration file was been created at " + file.getAbsolutePath());
+				}
 			}
 			catch (IOException e)
 			{
-				e.printStackTrace();
+				logger.log(Level.SEVERE, "Can't create configuration file !", e);
 			}
 
 			try
 			{
-				InputStream  in  = MyroBot.getResource("settings.json");
-				OutputStream out = new FileOutputStream(file);
+				InputStream in = MyroBot.getResource("settings.json");
 
-				byte[] buf = new byte[1024 * 4];
-				int    len = in.read(buf);
-
-				while (len != -1)
+				try (OutputStream out = new FileOutputStream(file))
 				{
-					out.write(buf, 0, len);
-					len = in.read(buf);
+					byte[] buf = new byte[1024 * 4];
+					int    len = in.read(buf);
+
+					while (len != -1)
+					{
+						out.write(buf, 0, len);
+						len = in.read(buf);
+					}
 				}
 
-				out.close();
 				in.close();
 			}
 			catch (Exception e)
 			{
-				e.printStackTrace();
+				logger.log(Level.SEVERE, "Error in copying the default configuration file !", e);
 			}
 		}
 
 		settings = FileConfig.of("settings.json");
 		settings.load();
+
+		logger.info("The configuration has been loaded!");
 	}
 
 	public void init()

@@ -24,6 +24,7 @@ import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.logging.Logger;
 
 /**
  * File <b>MyroBot</b> located on fr.cleymax.myrobot MyroBot is a part of MyroBot.
@@ -37,6 +38,8 @@ import java.util.concurrent.Executors;
 public class MyroBot {
 
 	private static MyroBot instance;
+
+	private final Logger logger = Logger.getLogger(getClass().getSimpleName());
 
 	private final HypixelAPI     hypixelAPI;
 	private final CommandManager commandManager;
@@ -85,16 +88,9 @@ public class MyroBot {
 		new TerminatBot(this).start();
 	}
 
-	public static void main(String[] args)
+	public static void main(String[] args) throws LoginException, InterruptedException
 	{
-		try
-		{
-			new MyroBot();
-		}
-		catch (LoginException | InterruptedException e)
-		{
-			e.printStackTrace();
-		}
+		new MyroBot();
 	}
 
 	public static InputStream getResource(String filename)
@@ -151,6 +147,11 @@ public class MyroBot {
 	public HttpClient getHttpClient()
 	{
 		return httpClient;
+	}
+
+	public Logger getLogger()
+	{
+		return logger;
 	}
 
 	public static MyroBot getInstance()
