@@ -4,7 +4,6 @@ import fr.cleymax.myrobot.api.Config;
 import fr.cleymax.myrobot.command.CommandManager;
 import fr.cleymax.myrobot.commands.*;
 import fr.cleymax.myrobot.listener.ChannelListener;
-import fr.cleymax.myrobot.terminal.TerminatBot;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.OnlineStatus;
@@ -84,8 +83,6 @@ public class MyroBot {
 		this.nameCache = new HashMap<>();
 
 		loadingEmote = jda.getGuildById("336564349143613454").getEmoteById("651481926670221331");
-
-		new TerminatBot(this).start();
 	}
 
 	public static void main(String[] args) throws LoginException, InterruptedException
