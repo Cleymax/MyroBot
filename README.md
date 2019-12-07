@@ -97,7 +97,7 @@ gradle run
 ## ✍️ Authors <a name = "authors"></a>
 + [@Cleymax](https://github.com/Cleymax) - Idea & Initial work
 
-> See also the list of [contributors](https://github.com/Cleymax/MyroBot) who participated in this project.
+> See also the list of [contributors](https://github.com/Cleymax/MyroBot/graphs/contributors) who participated in this project.
 
 ## 🔐 License <a name = "license"></a>
 + [MIT License](LICENSE) 
