@@ -9,9 +9,9 @@
 
   [![Discord](https://img.shields.io/discord/336564349143613454?style=flat-square)](https://discord.gg/J2UgcpQ) 
   [![Status](https://img.shields.io/badge/status-active-success?style=flat-square)]() 
-  [![GitHub Issues](https://img.shields.io/github/issues/Cleymax/Myrobot?style=flat-square)](https://github.com/Cleymax/Myrobot/issues) 
-  [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/Cleymax/Myrobot?style=flat-square)](https://github.com/Cleymax/Myrobot/pulls) 
-  [![License](https://img.shields.io/github/license/Cleymax/Myrobot?style=flat-square)](/LICENSE) 
+  [![GitHub Issues](https://img.shields.io/github/issues/Cleymax/MyroBot?style=flat-square)](https://github.com/Cleymax/MyroBot/issues) 
+  [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/Cleymax/MyroBot?style=flat-square)](https://github.com/Cleymax/MyroBot/pulls) 
+  [![License](https://img.shields.io/github/license/Cleymax/MyroBot?style=flat-square)](/LICENSE) 
 
 </div>
 <br>
