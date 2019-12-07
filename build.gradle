@@ -20,7 +20,7 @@ mainClassName = 'fr.cleymax.myrobot.MyroBot'
 repositories {
     jcenter()
     mavenCentral()
-    maven { url "https://oss.jfrog.org/artifactory/libs-release" }
+    maven { url = 'https://oss.jfrog.org/artifactory/libs-release' }
 }
 
 dependencies {
