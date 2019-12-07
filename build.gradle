@@ -72,6 +72,6 @@ sonarqube {
         property "sonar.projectKey", "Cleymax_MyroBot"
         property "sonar.organization", "cleymax"
         property "sonar.host.url", "https://sonarcloud.io"
-        property "sonar.login", "b13fb2dc8e808242708f4376fe284aba73f5ff29"
+        property "sonar.login", System.getenv("SONAR_LOGIN")
     }
 }
