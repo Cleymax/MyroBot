@@ -23,3 +23,9 @@ jobs:
         run: chmod +x gradlew
       - name: Build with Gradle
         run: ./gradlew build
+      - name: Create Zip file
+        run: zip -r MyroBot.zip ./build/libs/
+      - uses: actions/upload-artifact@v1
+        with:
+          name: MyroBot.zip
+          path: ./MyroBot.zip
