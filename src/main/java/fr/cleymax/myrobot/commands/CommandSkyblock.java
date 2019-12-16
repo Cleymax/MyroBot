@@ -42,7 +42,7 @@ public class CommandSkyblock extends Command {
 	{
 		HypixelAPI hypixelAPI = this.main.getHypixelAPI();
 
-        if (args.length == 0) {  sendHelp(event); return };
+        if (args.length == 0) {  sendHelp(event); return; }
 
         switch (args[0].toLowerCase()) {
             case "new":
